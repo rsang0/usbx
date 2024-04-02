@@ -150,6 +150,12 @@
 #ifndef UX_API_H
 #define UX_API_H
 
+#if !defined(UX_DEVICE_STANDALONE)
+#define UX_DEVICE_STANDALONE
+#define UX_STANDALONE
+#define UX_DEVICE_SIDE_ONLY
+#endif
+
 /* Determine if a C++ compiler is being used.  If so, ensure that standard
    C is used to process the API information.  */
 
@@ -163,7 +169,7 @@ extern   "C" {
 /* Include USBX port specific file.  */
 
 #include "ux_port.h"
-
+#include "dbg_log.h"
 /* Process compile options:
  *
  * - UX_HOST_SIDE_ONLY/UX_HOST_STANDALONE:

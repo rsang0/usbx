@@ -55,6 +55,7 @@
 #ifndef UX_PORT_H
 #define UX_PORT_H
 
+#define UX_INCLUDE_USER_DEFINE_FILE
 
 /* Determine if the optional USBX user define file should be used.  */
 
